@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(
+    45deg,
+    rgb(255, 208, 0) 50%,
+    rgb(1, 163, 1) 50%
+  );
+  height: 100vh;
+  background-attachment: fixed;
+}
+.link-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.link-container a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #ddd;
+}
+
+.link-container a:hover {
+  background-color: #ccc;
+}
+
+.maindiv {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.link {
+  height: 50px;
+  width: 95%;
+  background-color: white;
+  border-radius: 4px;
+  margin: 15px 0 10px 0;
+}
+.upload {
+  height: auto;
+  width: 95%;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  margin: 0 0 10px 0;
+}
+.uploaded {
+  height: 3500px;
+  width: 97%;
+  margin: 1.5%;
+  background-color: rgb(223, 223, 223);
+  border-radius: 2px;
+  padding: 10px;
+}
+.data {
+  height: 60px;
+  width: 98%;
+  margin: 1%;
+  background-color: rgb(76, 123, 177);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  position: sticky;
+  bottom: 10px;
+}
+.fromdevice {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.send {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#txt {
+  height: 40px;
+  width: 60%;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+#fromdevicefiles {
+  display: none;
+}
+img {
+  width: 25px;
+}
+.uploadedmsg {
+  width: 60%;
+  margin: 10px 10px 10px 10px;
+  background: chocolate;
+}
+.chat {
+  width: 50%;
+  margin: 5px;
+  background: chocolate;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.chat2 {
+  width: 50%;
+  margin: 5px;
+  background: rgb(20, 228, 48);
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up page</title>
+    <link rel="stylesheet" href="signin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@800&family=Montserrat&family=Ubuntu:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <script type="text/javascript">
+        var submitted = false;
+      </script>
+      <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted){window.location='form.html';}"
+      ></iframe>
+      <form action="#" target="hidden_iframe">
+        <div class="signin"><h1><p class="green-text">SIGN IN</p></h1></div>
+        <div class="info">
+          <label>Email</label><br />
+          <input type="email" id="email" name="entry.1591234373" /><br />
+          <label>Password</label><br />
+          <input type="password" id="password" name="entry.1223052083" /><br />
+          <input id="signInBtn" type="submit" value="Submit" /><br />
+        </div>
+        <p>By clicking the SIGN IN button you agree to our</p>
+        <p>
+          <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+        </p>
+      </form>
+    </div>
+    <p class="footer">
+      Don't have an account? <a class="link" href="signUp.html"> SIGN UP here</a>
+    </p>
+
+    <script type="module" src="signin.js"></script>
+  </body>
+</html>

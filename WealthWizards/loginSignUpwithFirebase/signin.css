@@ -1,0 +1,100 @@
+body {
+  background-image: url("gradient3.jpg");
+  background-repeat: no-repeat;
+  font-size: 13px;
+  background-size: cover;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+.container {
+  width: 400px;
+  height: 460px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 100px 550px;
+  padding: auto;
+  font-family: "Montserrat", serif;
+  box-shadow: 20px 20px 30px rgb(53, 53, 53);
+}
+
+.info {
+  margin: 25px;
+  line-height: 2;
+}
+
+input {
+  border-radius: 5px;
+  width: 350px;
+  height: 35px;
+  margin-bottom: 8px;
+  border-style: solid;
+}
+
+label {
+  font-family: "Ubuntu";
+  font-size: 15px;
+}
+
+.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #fff;
+  font-size: 21px;
+  background: #1f8a70;
+  padding: 6px 143px 30px 145px;
+  text-decoration: none;
+  border: none;
+  margin-top: 30px;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.footer {
+  color: white;
+  font-size: 20px;
+  margin-left: -30px;
+}
+
+.link {
+  color: #000;
+}
+.green-text {
+  padding: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: larger;
+  background-color: #03c988;
+  border-radius: 5px 5px 30px 30px;
+}
+#signInBtn {
+  background-color: #03c988;
+  color: white;
+  margin-top: 20px;
+  height: 50x;
+}
+#signInBtn:active {
+  background-color: #c7e8ca;
+  color: white;
+  margin-top: 20px;
+  height: 50x;
+  border-color: #03c988;
+}
+#email,
+#password {
+  background-color: #f6f1e9;
+  opacity: 50%;
+}

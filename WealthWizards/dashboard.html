@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    
+    .card {
+      background-color: #f2f2f2;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+    }
+    
+    .goals {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .panel {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+      margin-top: 20px;
+      padding: 20px;
+      text-align: center;
+      width: 500px;
+    }
+    
+    input[type="range"] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 20px;
+  outline: none;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  margin-top: -5px;
+  width: 20px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.slider-container {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slider-progress {
+  position: absolute;
+  height: 100%;
+  background-color: #55dc5a;
+  width: 30%; /* Set initial width to 30% */
+  transition: width 1s ease-in-out;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Dashboard</h1>
+  </div>
+  
+  <div class="container">
+    <div class="card">
+      <h2>Goals</h2>
+      <p>You have set 3 goals this month.</p>
+      <p>1. Sample Text</p>
+      <p>2. Sample Text</p>
+      <p>3. Sample Text</p>
+    </div>
+    
+    <div class="card">
+      <h2>Expenses</h2>
+      <p>You have spent $800 this month.</p>
+      <p>You are $300 over budget.</p>
+    </div>
+    
+    <div class="card">
+      <h2>Gamification</h2>
+      <p>Complete your goals to earn points!</p>
+      <p>You have earned 50 points this month.</p>
+    </div>
+  </div>
+  
+  <div class="goals">
+    <h2>Goals Progress</h2>
+    <div class="panel">
+      <p>Lose 
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>Lorem ipsum dolor sit amet, </p>
+    </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>Lorem ipsum dolor sit amet, </p>
+      </div>
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>Lorem ipsum dolor sit amet,</p>
+      </div>
+    </div>
+    <div class="gamification">
+      <h2>Gamification</h2>
+      <div class="slider">
+        <h3>Track expenses according to goals:</h3>
+        <div class="slider-container">
+          <input type="range" min="0" max="100" value="30">
+          <div class="slider-progress"></div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<style>
+  .goals {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .panel {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+  }
+  
+  .card {
+    background-color: #f2f2f2;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .gamification {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .slider {
+    margin: 20px;
+  }
+  
+  input[type=range] {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+</style> 

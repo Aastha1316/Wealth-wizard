@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Products</title>
+    <style>
+      .input-row {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      .input-row input {
+        margin-right: 10px;
+      }
+
+      #total-price-container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="inputs-container">
+      <div class="input-row">
+        <input type="text" class="name-input" placeholder="Product name">
+        <input type="number" class="price-input" placeholder="Price">
+        <input type="number" class="growth-rate" placeholder="Growth rate">
+        <input type="number" class="invest-time" placeholder="Invest for time">
+      </div>
+    </div>
+
+    
+
+    <button id="add-input">Add Product</button>
+
+    <div id="total-price-container">
+      <p>Total Price: <span id="total-price">0</span></p>
+    </div>
+
+    <script>
+      const inputsContainer = document.getElementById('inputs-container');
+      const addInputButton = document.getElementById('add-input');
+      const totalPrice = document.getElementById('total-price');
+      let productCount = 1;
+      let total = 0;
+      const products = {};
+    
+      function addInputRow() {
+        const newRow = document.createElement('div');
+        newRow.className = 'input-row';
+    
+        const nameInput = document.createElement('input');
+        nameInput.type = 'text';
+        nameInput.className = 'name-input';
+        nameInput.placeholder = 'Product name';
+    
+        const priceInput = document.createElement('input');
+        priceInput.type = 'number';
+        priceInput.className = 'price-input';
+        priceInput.placeholder = 'Price';
+    
+        const growthRateInput = document.createElement('input');
+        growthRateInput.type = 'number';
+        growthRateInput.className = 'growth-rate';
+        growthRateInput.placeholder = 'Growth Rate';
+    
+        const timeInvestedInput = document.createElement('input');
+        timeInvestedInput.type = 'number';
+        timeInvestedInput.className = 'invest-time';
+        timeInvestedInput.placeholder = 'Invest for time';
+    
+        newRow.appendChild(nameInput);
+        newRow.appendChild(priceInput);
+        newRow.appendChild(growthRateInput);
+        newRow.appendChild(timeInvestedInput);
+    
+        inputsContainer.appendChild(newRow);
+    
+        nameInput.focus();
+    
+        productCount++;
+      }
+    
+      function updateTotal() {
+        total = 0;
+    
+        const priceInputs = document.querySelectorAll('.price-input');
+        priceInputs.forEach(sumInputs);
+    
+        totalPrice.textContent = total.toFixed(2);
+      }
+    
+      function sumInputs(input) {
+        if (input.value) {
+          total += parseFloat(input.value);
+        }
+      }
+    
+      function storeProductData() {
+        const nameInputs = document.querySelectorAll('.name-input');
+        const priceInputs = document.querySelectorAll('.price-input');
+        const growthRateInputs = document.querySelectorAll('.growth-rate');
+        const investTimeInputs = document.querySelectorAll('.invest-time');
+    
+        nameInputs.forEach((input, index) => {
+          if (input.value && priceInputs[index].value && growthRateInputs[index].value && investTimeInputs[index].value) {
+            const productName = input.value;
+            const productPrice = parseFloat(priceInputs[index].value);
+            const growthRate = parseFloat(growthRateInputs[index].value);
+            const investTime = parseInt(investTimeInputs[index].value);
+    
+            products[productName] = {
+              productPrice,
+              growthRate,
+              investTime
+            };
+          }
+        });
+    
+        console.log(products);
+      }
+    
+      addInputButton.addEventListener('click', addInputRow);
+      inputsContainer.addEventListener('input', updateTotal);
+      inputsContainer.addEventListener('input', storeProductData);
+    </script>
+    
+  </body>
+</html>

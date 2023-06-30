@@ -1,0 +1,184 @@
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <a href="#" class="exit-button">Home</a>
+        <title>Smart Calculator</title>
+        <style>
+          /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container styles */
+    #inputs-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    /* Input row styles */
+    .input-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .input-row input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      font-size: 16px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .name-input {
+      width: 300px;
+    }
+
+    .price-input, .growth-rate, .invest-time {
+      width: 150px;
+    }
+
+    /* Add input button styles */
+    #add-input {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #add-input:hover {
+      background-color: #0056b3;
+    }
+
+    /* Submit button styles */
+    #submit {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #28a745;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #submit:hover {
+      background-color: #1f8c38;
+    }
+
+    /* Invest data container styles */
+    .invest-data-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .invest-data-input {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .invest-data-input input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      font-size: 16px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .inflation {
+      width: 200px;
+    }
+
+    .time {
+      width: 150px;
+    }
+
+    /* Total price container styles */
+    #total-price-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    #profit {
+      font-size: 24px;
+      font-weight: bold;
+      color: #28a745;
+    }
+
+    .exit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.exit-button-link:hover {
+  opacity: 1;
+}
+
+
+
+      </style>
+      </head>
+      <body>
+        <h1>Smart Calculator:</h1>
+        <div id="inputs-container">
+          <form action="#" onsubmit="calculateTotalProfit()" >
+          <div class="input-row">
+            <input type="text" class="name-input" placeholder="Items" required>
+            <input type="number" step=100 class="price-input" placeholder="Spending" required>
+            <input type="number" step=0.01 class="growth-rate" placeholder="Growth rate" required>
+            <input type="number" step=1 class="invest-time" placeholder="Invest for time" required>
+            
+          </div>
+          <div class="newRow"></div>
+        </div>
+
+        
+    <div class="invest-data-container">
+    <div class="invest-data-input">
+      
+      <input type="number" step=0.01 class="inflation" placeholder="Inflation rate" required>
+      <input type=number step=1 class="time"   placeholder="Time" >
+    </div>
+    <div class="invest-data-button">
+
+        <button id="add-input" type="button">Add Fields</button>
+        <button id="submit" type="submit"  > Predict</button>
+    </div>
+    </form>
+
+      </div>
+
+        <div id="total-price-container">
+          <!-- <p>Total Price: <span id="total-price">0</span></p> -->
+          <p>Your present capital should be: <span id="profit">0</span></p>
+        </div>
+
+        <script  src="textAddjavscr.js"></script>
+
+        
+      </body>
+    </html>
